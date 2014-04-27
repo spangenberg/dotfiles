@@ -1,0 +1,5 @@
+#
+# Set paths.
+#
+
+export PATH="/usr/local/bin:/usr/local/sbin:$PATH"

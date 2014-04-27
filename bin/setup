@@ -1,0 +1,29 @@
+#!/bin/sh
+
+echo "Start installing dotfiles..."
+
+echo "Start fetching NeoBundle..."
+mkdir -p $HOME/.vim/bundle && rm -rf $HOME/.vim/bundle/neobundle.vim
+git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
+echo "Done."
+
+echo
+
+echo "Start fetching Prezto..."
+rm -rf $HOME/.zprezto
+git clone https://github.com/sorin-ionescu/prezto.git $HOME/.zprezto --recursive
+echo "Done."
+
+echo
+
+echo "Start symlinking dotfiles...."
+cd $HOME/.dotfiles && stow git ruby tmux vim zsh
+echo "Installation done."
+
+echo
+
+echo "Start installing vim plugins..."
+$HOME/.vim/bundle/neobundle.vim/bin/neoinstall
+echo "Done."
+
+echo "Done."
