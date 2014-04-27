@@ -1,0 +1,17 @@
+#!/bin/sh
+
+BRANCH="master"
+
+if [ -d $HOME/.dotfiles ]; then
+  echo "You already have some dotfiles under ~/.dotfiles, please remove them" \
+       "before running the script again."
+  exit 1
+fi
+
+cd /tmp
+curl -Ls https://github.com/spangenberg/dotfiles/archive/$BRANCH.tar.gz | tar zx
+mv dotfiles-$BRANCH $HOME/.dotfiles
+$HOME/.dotfiles/setup
+
+echo "Congratulations, you installed Daniel Spangenberg's dotfiles" \
+     "successfully."
