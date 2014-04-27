@@ -207,3 +207,6 @@ set colorcolumn=80
 let g:goyo_width=120
 nnoremap <silent> <leader>z :Goyo<cr>
 nnoremap <silent> <leader>x :noh<cr>
+
+" Store swapfiles somewhere else
+set directory=$HOME/.vim/swap//
