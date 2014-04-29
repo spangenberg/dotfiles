@@ -51,6 +51,7 @@ NeoBundle 'junegunn/goyo.vim'
 NeoBundle 'amix/vim-zenroom2'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'nvie/vim-togglemouse'
 
 NeoBundleCheck
 
