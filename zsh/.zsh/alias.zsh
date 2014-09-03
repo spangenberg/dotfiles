@@ -2,6 +2,10 @@
 # Alias
 #
 
+# VIM
+alias vim="nvim"
+alias vi="nvim"
+
 # Global
 alias -g C="| column"
 alias -g R="| row"
