@@ -48,10 +48,11 @@ NeoBundle 'editorconfig/editorconfig-vim'
 NeoBundle 'vim-scripts/VimClojure'
 NeoBundle 'vim-scripts/mediawiki.vim'
 NeoBundle 'junegunn/goyo.vim'
-NeoBundle 'amix/vim-zenroom2'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'nvie/vim-togglemouse'
+NeoBundle 'fatih/vim-go'
+NeoBundle 'edkolev/tmuxline.vim'
 
 NeoBundleCheck
 
@@ -115,10 +116,11 @@ set textwidth=79
 
 " When set to dark, Vim will try to use colors that look good on a dark
 " background.
-" set background=dark
+set background=dark
 
 " Set the color scheme.
 colorscheme twilight256
+" colorscheme solarized
 
 " Print the line number in front of each line.
 set number
@@ -211,3 +213,11 @@ nnoremap <silent> <leader>x :noh<cr>
 
 " Store swapfiles somewhere else
 set directory=$HOME/.vim/swap//
+
+let g:tmuxline_preset = {
+      \'a'    : '#S',
+      \'win'  : ['#I', '#W'],
+      \'cwin' : ['#I', '#W', '#F'],
+      \'x'    : '#(~/.tmux/plugins/tmux-battery/scripts/battery_percentage.sh) Battery',
+      \'y'    : ['%R', '%a', '%Y'],
+      \'z'    : '#h'}
