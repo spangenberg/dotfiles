@@ -53,6 +53,7 @@ NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'nvie/vim-togglemouse'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'edkolev/tmuxline.vim'
+NeoBundle 'rking/ag.vim'
 
 NeoBundleCheck
 
