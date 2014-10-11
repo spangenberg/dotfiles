@@ -2,6 +2,13 @@
 
 echo "Start installing dotfiles..."
 
+echo "Start fetching tpm..."
+mkdir -p $HOME/.tmux/plugins && rm -rf $HOME/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm.git $HOME/.tmux/plugins/tpm
+echo "Done."
+
+echo
+
 echo "Start fetching NeoBundle..."
 mkdir -p $HOME/.vim/bundle && rm -rf $HOME/.vim/bundle/neobundle.vim
 git clone https://github.com/Shougo/neobundle.vim $HOME/.vim/bundle/neobundle.vim
