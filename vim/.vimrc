@@ -1,6 +1,13 @@
-" Use Vim settings, rather than Vi settings.
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+" Note: Skip initialization for vim-tiny or vim-small.
+if !1 | finish | endif
+
+if has('vim_starting')
+  " Use Vim settings, rather than Vi settings.
+  " This must be first, because it changes other options as a side effect.
+  set nocompatible
+
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
+endif
 
 " Let me hide modified buffers
 set hidden
@@ -23,16 +30,9 @@ map <Leader>m :bprevious<CR>
 
 set encoding=utf-8
 
-if has('vim_starting')
-    set runtimepath+=~/.vim/bundle/neobundle.vim/
-endif
-
-call neobundle#rc(expand('~/.vim/bundle/'))
-
-" Let NeoBundle manage NeoBundle
+call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" My Bundles :)
 NeoBundle 'bling/vim-airline'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'vim-ruby/vim-ruby'
@@ -54,6 +54,8 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'rking/ag.vim'
 
+call neobundle#end()
+filetype plugin indent on
 NeoBundleCheck
 
 " Airplane
