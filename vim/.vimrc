@@ -50,7 +50,6 @@ NeoBundle 'vim-scripts/mediawiki.vim'
 NeoBundle 'junegunn/goyo.vim'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'nvie/vim-togglemouse'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'edkolev/tmuxline.vim'
 NeoBundle 'rking/ag.vim'
@@ -222,3 +221,5 @@ let g:tmuxline_preset = {
       \'x'    : '#(~/.tmux/plugins/tmux-battery/scripts/battery_percentage.sh) Battery',
       \'y'    : ['%R', '%a', '%Y'],
       \'z'    : '#h'}
+
+set mouse=a
