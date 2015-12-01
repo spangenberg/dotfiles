@@ -1,2 +1,4 @@
 tmux/.tmux/plugins/
 vim/.vim/swap/*
+nvim/.config/nvim/bundle/
+nvim/.config/nvim/swap/
