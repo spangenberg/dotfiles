@@ -11,7 +11,7 @@ fi
 cd /tmp
 curl -Ls https://github.com/spangenberg/dotfiles/archive/$BRANCH.tar.gz | tar zx
 mv dotfiles-$BRANCH $HOME/.dotfiles
-$HOME/.dotfiles/setup
+$HOME/.dotfiles/bin/install
 
 echo "Congratulations, you installed Daniel Spangenberg's dotfiles" \
      "successfully."
